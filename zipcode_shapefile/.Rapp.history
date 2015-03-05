@@ -1,0 +1,495 @@
+head(mpg)
+qplot(displ, hwy, data = mpg, colour = factor(cyl))
+qplot(displ, hwy, data = mpg, colour = factor(cyl)) + geom_smooth()
+p<-ggplot(diamonds, aes(carat, price, colour = "cut" ))
+p + layer(geom = "point")
+p
+p<-ggplot(diamonds, aes(carat, price, colour = cut ))
+p + layer(geom = "point")
+p2<-ggplot(diamonds, aes(x = carat))
+p2 + layer(geom = "bar", geom_prams = "steelblue", stat = bin, stat_params = list(binwidth = 2))
+bin
+p2<-ggplot(diamonds, aes(x = carat))
+p2 + layer(geom = "bar", geom_prams = "steelblue", stat = "bin", stat_params = list(binwidth = 2))
+p2<-p2 + layer(geom = "bar", geom_prams = "steelblue", stat = "bin", stat_params = list(binwidth = 2))
+p2
+p<-ggplot(diamonds, aes(carat, price, colour = cut ))
+p<-p + layer(geom = "point")
+p
+p2<-ggplot(diamonds, aes(x = carat))
+p2<- p2 + geom_histogram(bindwidth = 2, fill = "steelblue")
+p2
+p2<-ggplot(diamonds, aes(x = carat))#
+p2<-p2 + layer(geom = "bar", geom_prams = "steelblue", stat = "bin", stat_params = list(binwidth = 2))
+p2
+p2<-ggplot(diamonds, aes(x = carat))#
+p2<-p2 + layer(geom = "bar", geom_prams = list("steelblue"), stat = "bin", stat_params = list(binwidth = 2))
+p2
+p2<-p2 + layer(geom = "bar", geom_prams = list(fill = "steelblue"), stat = "bin", stat_params = list(binwidth = 2))
+p2<-ggplot(diamonds, aes(x = carat))
+p2<-p2 + layer(geom = "bar", geom_prams = list(fill = "steelblue"), stat = "bin", stat_params = list(binwidth = 2))
+p2
+p2<-ggplot(diamonds, aes(x = carat))
+p2<-p2 + layer(geom = "bar", geom_params = list(fill = "steelblue"), stat = "bin", stat_params = list(binwidth = 2))
+p2
+p2<-ggplot(diamonds, aes(x = carat))#
+p2<-p2 + layer(geom = "bar", geom_params = list(fill = "steelblue"), stat = "bin", stat_params = list(binwidth = 2))
+p2
+p2<-ggplot(diamonds, aes(x = carat))#
+p2<- p2 + geom_histogram(bindwidth = 2, fill = "steelblue")#
+p2
+summary(p2)
+q()
+library(data.table)
+?data.table
+library(ggmap)
+?ggmap
+intersection<-geocode("10th Street NE & D Street NE, Washington, DC")
+get_map
+?get_map
+q()
+?install.packages
+?get_map
+?getmap
+library(ggmap)
+?get_map
+library(ggmap)
+?get_map
+?geom_pie
+library(ggplto2)
+library(ggplot2)
+?geom_points
+?geom_point
+library(maps)
+?maps
+?map_data
+map_data("state")
+library(maps)
+library(ggmap)
+intersection<-geocode("10th Street NE & D Street NE, Washington, DC")
+intersection
+intersection<-geocode("10th Street NE, Washington, DC & D Street NE, Washington, DC")
+intersection
+intersection<-geocode("10th Street NE, Washington, DC & D Street NE, Washington, DC")
+intersection
+intersection<-geocode("10th Street Northeast & D Street Northeast, Washington, DC")
+intersection
+intersection<-geocode("10th Street Northeast, Washington, DC & D Street Northeast, Washington, DC")
+intersection
+geocode("316 10th Street NE, Washington, DC")
+library(maps)
+?geocode
+geocode("316 10th Street NE, Washington, DC", output = "more")
+map<-get_map(location = "Washington, DC")
+map<-ggmap(map) #Now turn the raster object in to somthing we can use in ggplot
+qplot(map)
+map<-get_map(location = c(longitude = , latitude = ), source = "google", maptype = "roadmap")
+map<-get_map(location = "Washington, DC")
+map2<-ggmap(map) #Now turn the raster object in to somthing we can use in ggplot
+map2
+?get_map
+map<-get_map(location = "Washington, DC", maptype = "roadmap")
+map<-ggmap(map) #Now turn the raster object in to somthing we can use in ggplot
+map
+map<-get_map(location = "Washington, DC", maptype = "hybrid")
+map<-ggmap(map) #Now turn the raster object in to somthing we can use in ggplot
+map
+?get_map
+map<-get_map(location = "Washington, DC", maptype = "watercolor")
+map<-ggmap(map) #Now turn the raster object in to somthing we can use in ggplot
+map<-get_map(location = "Washington, DC", maptype = "watercolor")
+map<-get_map(location = "Washington, DC", maptype = "watercolor", format = 'jpeg')
+map<-get_map(location = "Washington, DC", maptype = "watercolor", format = 'png')
+map<-get_stamenmap(location = "Washington, DC", maptype = "watercolor", format = 'png')
+map<-get_map(location = "Washington, DC", maptype = "terrain")
+map<-get_map(location = "Washington, DC")
+map<-ggmap(map) #Now turn the raster object in to somthing we can use in ggplot
+map
+get_map(locatoin = "Washington, DC", source = "osm")
+?get_osm
+get_map(locatoin = "Washington, DC", source = "cloudmade")
+get_map(location = "Washington, DC", source = "cloudmade")
+?get_coudmademap
+?get_cloudmademap
+?get_map
+get_map(location = "Washington, DC", source = "stamen")
+?get_stamen
+map<-get_map(location = "Washington, DC") #This defaults to Google
+map<-ggmap(map) #Now turn the raster object in to somthing we can use in ggplot
+map<-get_map(location = "Washington, DC") #This defaults to Google
+map
+str(map)
+?get_map
+get_map(c(-77.5, 38.6, -76.6, 39.2), source = "osm")
+map<-get_map(c(-77.5, 38.6, -76.6, 39.2), source = "osm")
+map<-ggmap(map) #Now turn the raster object in to somthing we can use in ggplot
+map
+map<-get_map(c(-77.5, 38.6, -76.6, 39.2), source = "stamen")
+map<-get_map(c(-77.5, 38.6, -76.6, 39.2), source = "stamen", maptype = "watercolor")
+map<-get_map(c(-77.5, 38.6, -76.6, 39.2), source = "stamen", maptype = "terrain")
+map<-get_stamenmap(c(-77.5, 38.6, -76.6, 39.2), source = "stamen", maptype = "terrain")
+map<-get_stamenmap(c(-77.5, 38.6, -76.6, 39.2), zoom = 15, source = "stamen", maptype = "terrain")
+map
+get_stamenmap(bbox = c(left = -95.80204, bottom = 29.38048, right = -94.92313, top = 30.14344), zoom = 10)
+find.package()
+?ggmap
+map<-get_stamenmap(c(-77.5, 38.6, -76.6, 39.2), zoom = 15, source = "stamen")
+get_stamenmap
+?getmap
+?get_map
+library(ggmap)
+?get_map
+map<-get_map(c(-77.5, 38.6, -76.6, 39.2), source = "cloudmade")
+?get_cloudmademap.
+?get_cloudmademap
+q()
+library(ggmap)
+?ggmap
+get_map
+?get_map
+q()
+library(maptools)
+shapefile<-readShapeSpatial("/Users/SeanWarlick/Desktop/tl_2010_11_zcta510/tl_2010_11_zcta510.shp")
+str(shapefile)
+shapefile@data
+rownames(shapefile@data)
+shape@data$id<-shape@data$ZCTA5CE10
+shapefile@data$id<-shapefile@data$ZCTA5CE10
+data<-fortify(shapefile, region = id)
+library(ggplot2)
+data<-fortify(shapefile, region = id)
+data<-fortify(shapefile, region = "id")
+library(ggmap)
+data<-fortify(shapefile, region = "id")
+?gpclibPermitStatus
+gpclibPermitStatus()
+gpclibPermitStatus(TRUE)
+gpclibPermitStatus()
+gpclibPermit()
+library(rgeos)
+shapefile<-readShapeSpatial("/Users/SeanWarlick/Desktop/tl_2010_11_zcta510/tl_2010_11_zcta510.shp")
+shapefile@data$id<-shapefile@data$ZCTA5CE10
+data<-fortify(shapefile, region = "id")
+gpclibPermit()
+gpclibPermit(TRUE)
+q()
+library(ggmap)#
+library(zipcode)#
+library(ggplot2)#
+library(gpclib)#
+library(maptools)#
+#
+pop<-read.csv("ACS_12_5YR_B01003.csv", sep = ',', header = TRUE)#
+#Prepare Maps#
+#
+map<-get_map(location=c(lon=-77.00455, lat=38.90893), zoom = 12, source = 'google', maptype = 'road')#
+#
+shapefile<-readShapeSpatial("/Users/SeanWarlick/Desktop/tl_2010_11_zcta510/tl_2010_11_zcta510.shp")#
+shapefile@data$id = rownames(shapefile@data)#
+dc.points<-fortify(shapefile, region = "id")#
+#
+#Prepare Data#
+pop<-read.csv("ACS_12_5YR_B01003.csv", sep = ',', header = TRUE) # Read in Population Data#
+#
+dc.df<-merge(dc.points, shapefile@data, by = "id") # Merge Needed Data#
+dc2<-merge(dc.df, pop, by.x = "ZCTA5CE10", by.y = "GEO.id2")#
+#
+dc2<-dc2[order(dc2$HD01_VD01), ]#
+dc2$binpop<-cut(dc2$HD01_VD01, breaks = c(0, 10000, 20000, 30000, 40000, 50000, 60000))#
+#
+#Plot Maps#
+map + geom_polygon(aes(x = long, y = lat, group = group, fill = binpop), data = dc2, colour ="white", alpha = .4, size = .3)
+gclibPermit()
+gpclibPermit()
+shapefile<-readShapeSpatial("/Users/SeanWarlick/Desktop/tl_2010_11_zcta510/tl_2010_11_zcta510.shp")
+shapefile@data$id = rownames(shapefile@data)
+dc.points<-fortify(shapefile, region = "id")
+pop<-read.csv("ACS_12_5YR_B01003.csv", sep = ',', header = TRUE) # Read in Population Data
+library(ggmap)#
+library(zipcode)#
+library(ggplot2)#
+library(gpclib)#
+library(maptools)#
+#
+gpclibPermit()#
+#
+#Prepare Maps#
+#
+map<-get_map(location=c(lon=-77.00455, lat=38.90893), zoom = 12, source = 'google', maptype = 'road')#
+#
+shapefile<-readShapeSpatial("/Users/SeanWarlick/Desktop/tl_2010_11_zcta510/tl_2010_11_zcta510.shp")#
+shapefile@data$id = rownames(shapefile@data)#
+dc.points<-fortify(shapefile, region = "id")#
+#
+#Prepare Data#
+pop<-read.csv("ACS_12_5YR_B01003.csv", sep = ',', header = TRUE) # Read in Population Data#
+#
+dc.df<-merge(dc.points, shapefile@data, by = "id") # Merge Needed Data#
+dc2<-merge(dc.df, pop, by.x = "ZCTA5CE10", by.y = "GEO.id2")#
+#
+dc2<-dc2[order(dc2$HD01_VD01), ]#
+dc2$binpop<-cut(dc2$HD01_VD01, breaks = c(0, 10000, 20000, 30000, 40000, 50000, 60000))#
+#
+#Plot Maps#
+map + geom_polygon(aes(x = long, y = lat, group = group, fill = binpop), data = dc2, colour ="white", alpha = .4, size = .3)
+install.packages("bigmemory")
+library(bigmemory)
+?bigmemory
+q()
+library(devtools)
+install_github("ropensci/plotly")
+library(plotly)
+?RCurl
+help(RCurl)
+set_credentials_file("warlicks", "q35pch1sug")
+?set_credentials_file
+?install.packages
+update.packages("data.table")
+library(data.table)
+?forder
+forder()
+?data.table
+library(data.table)
+?forder
+?data.table
+q()
+#Library Load#
+library(data.table)#
+library(ggplot2)#
+library(grid)#
+#
+vplayout<-function(x, y){#
+ 	viewport(layout.pos.row = x, layout.pos.col = y)#
+} #Create quick funciton to place plots#
+#
+#Data Load#
+setwd("/Users/SeanWarlick/Documents/Dropbox/School/Spring 2013/Research/Data/R Data Files")#
+X<-fread("bike2.csv", header= TRUE) #Read In Data#
+#Daily Behavior by Cluster#
+##Departure Cluster 1#
+xd1<-X[Start_Id == 107| Start_Id == 100| Start_Id == 22| Start_Id == 120| Start_Id == 14| Start_Id == 18| Start_Id == 5| Start_Id == 71| Start_Id == 82| Start_Id == 81| Start_Id == 95| Start_Id == 83| Start_Id == 132| Start_Id == 80 & Day == "Weekday", length(Start_Station), by = list(Start_Hour, Start_Id)] #Subset & Aggregate#
+setnames(xd1, "V1", "trips") #Set Names#
+xd1<-xd1[, (trips / 65), by = list(Start_Hour, Start_Id)] #Daily Average for Weekdays#
+setnames(xd1, "V1", "trips")#
+setkey(xd1, Start_Hour) #Sort data table to create plot faster#
+#
+amd1<-ggplot(xd1, aes(x = Start_Hour, y = trips, colour = as.factor(Start_Id) )) + geom_point() + geom_line() + theme(legend.position = "none", axis.title.x = element_blank(), axis.title.y = element_blank()) + labs( title = "Morning Departure Cluster 1")#
+#
+##Departure Cluster 2#
+xd2<-X[Start_Id == 8| Start_Id == 108| Start_Id == 9| Start_Id == 4| Start_Id == 88| Start_Id == 77| Start_Id == 21 & Day == "Weekday", length(Start_Station), by = list(Start_Hour, Start_Id)]#
+setnames(xd2, "V1", "trips")#
+xd2<-xd2[, (trips / 65), by = list(Start_Hour, Start_Id)]#
+setnames(xd2, "V1", "trips")#
+setkey(xd2, Start_Hour)#
+#
+amd2<-ggplot(xd2, aes(x = Start_Hour, y = trips, colour = as.factor(Start_Id) )) + geom_point() + geom_line() + theme(legend.position = "none", axis.title.x = element_blank(), axis.title.y = element_blank()) + labs(title = "Morning Departure Cluster 2")#
+#
+##Departure Cluster 3#
+xd3<-X[Start_Id == 17| Start_Id == 2| Start_Id == 116| Start_Id == 15| Start_Id == 80| Start_Id == 23| Start_Id == 66| Start_Id == 14| Start_Id == 20| Start_Id == 22| Start_Id == 16| Start_Id == 71| Start_Id == 65| Start_Id == 82| Start_Id == 96| Start_Id == 43| Start_Id == 5| Start_Id == 83|  Start_Id == 126| Start_Id == 100 & Day == "Weekday", length(Start_Station), by = list(Start_Hour, Start_Id)]#
+setnames(xd3, "V1", "trips")#
+xd3<-xd3[, (trips / 65), by = list(Start_Hour, Start_Id)]#
+setnames(xd3, "V1", "trips")#
+setkey(xd3, Start_Hour) #Sort data table to create plot faster#
+#
+amd3<-ggplot(xd3, aes(x = Start_Hour, y = trips, colour = as.factor(Start_Id) )) + geom_point() + geom_line() + theme(legend.position = "none", axis.title.x = element_blank(), axis.title.y = element_blank()) + labs( title = "Morning Departure Cluster 3")#
+#
+## Departure Cluster 4#
+xd4<-X[Start_Id == 39| Start_Id == 83| Start_Id == 96| Start_Id == 95| Start_Id == 5| Start_Id == 38| Start_Id == 60 & Day == "Weekday", length(Start_Station), by = list(Start_Hour, Start_Id)]#
+setnames(xd4, "V1", "trips")#
+xd4<-xd4[, (trips / 65), by = list(Start_Hour, Start_Id)]#
+setnames(xd4, "V1", "trips")#
+setkey(xd4, Start_Hour) #Sort data table to create plot faster#
+#
+amd4<-ggplot(xd4, aes(x = Start_Hour, y = trips, colour = as.factor(Start_Id) )) + geom_point() + geom_line() + theme(legend.position = "none") + labs( title = "Morning Departure Cluster 4", x = "Start Hour", y = "Average Number of Trips")#
+#
+##Combine all AM Departure plots#
+grid.newpage()#
+pushViewport(viewport(layout = grid.layout (2, 4))) # Establish Plot Layout#
+#
+print(amd1, vp = vplayout(1, 1:2)) #Print Plots#
+print(amd2, vp = vplayout(1, 3:4))#
+print(amd3, vp = vplayout(2, 1:2))#
+print(amd4, vp = vplayout(2, 3:4))
+library(data.table)
+library(data.table)
+?data.table
+#Library Load#
+library(data.table)#
+library(ggplot2)#
+library(grid)#
+#
+vplayout<-function(x, y){#
+ 	viewport(layout.pos.row = x, layout.pos.col = y)#
+} #Create quick funciton to place plots#
+#
+#Data Load#
+setwd("/Users/SeanWarlick/Documents/Dropbox/School/Spring 2013/Research/Data/R Data Files")#
+X<-fread("bike2.csv", header= TRUE) #Read In Data#
+#Daily Behavior by Cluster#
+##Departure Cluster 1#
+xd1<-X[Start_Id == 107| Start_Id == 100| Start_Id == 22| Start_Id == 120| Start_Id == 14| Start_Id == 18| Start_Id == 5| Start_Id == 71| Start_Id == 82| Start_Id == 81| Start_Id == 95| Start_Id == 83| Start_Id == 132| Start_Id == 80 & Day == "Weekday", length(Start_Station), by = list(Start_Hour, Start_Id)] #Subset & Aggregate#
+setnames(xd1, "V1", "trips") #Set Names#
+xd1<-xd1[, (trips / 65), by = list(Start_Hour, Start_Id)] #Daily Average for Weekdays#
+setnames(xd1, "V1", "trips")#
+setkey(xd1, Start_Hour) #Sort data table to create plot faster#
+#
+amd1<-ggplot(xd1, aes(x = Start_Hour, y = trips, colour = as.factor(Start_Id) )) + geom_point() + geom_line() + theme(legend.position = "none", axis.title.x = element_blank(), axis.title.y = element_blank()) + labs( title = "Morning Departure Cluster 1")#
+#
+##Departure Cluster 2#
+xd2<-X[Start_Id == 8| Start_Id == 108| Start_Id == 9| Start_Id == 4| Start_Id == 88| Start_Id == 77| Start_Id == 21 & Day == "Weekday", length(Start_Station), by = list(Start_Hour, Start_Id)]#
+setnames(xd2, "V1", "trips")#
+xd2<-xd2[, (trips / 65), by = list(Start_Hour, Start_Id)]#
+setnames(xd2, "V1", "trips")#
+setkey(xd2, Start_Hour)#
+#
+amd2<-ggplot(xd2, aes(x = Start_Hour, y = trips, colour = as.factor(Start_Id) )) + geom_point() + geom_line() + theme(legend.position = "none", axis.title.x = element_blank(), axis.title.y = element_blank()) + labs(title = "Morning Departure Cluster 2")#
+#
+##Departure Cluster 3#
+xd3<-X[Start_Id == 17| Start_Id == 2| Start_Id == 116| Start_Id == 15| Start_Id == 80| Start_Id == 23| Start_Id == 66| Start_Id == 14| Start_Id == 20| Start_Id == 22| Start_Id == 16| Start_Id == 71| Start_Id == 65| Start_Id == 82| Start_Id == 96| Start_Id == 43| Start_Id == 5| Start_Id == 83|  Start_Id == 126| Start_Id == 100 & Day == "Weekday", length(Start_Station), by = list(Start_Hour, Start_Id)]#
+setnames(xd3, "V1", "trips")#
+xd3<-xd3[, (trips / 65), by = list(Start_Hour, Start_Id)]#
+setnames(xd3, "V1", "trips")#
+setkey(xd3, Start_Hour) #Sort data table to create plot faster#
+#
+amd3<-ggplot(xd3, aes(x = Start_Hour, y = trips, colour = as.factor(Start_Id) )) + geom_point() + geom_line() + theme(legend.position = "none", axis.title.x = element_blank(), axis.title.y = element_blank()) + labs( title = "Morning Departure Cluster 3")#
+#
+## Departure Cluster 4#
+xd4<-X[Start_Id == 39| Start_Id == 83| Start_Id == 96| Start_Id == 95| Start_Id == 5| Start_Id == 38| Start_Id == 60 & Day == "Weekday", length(Start_Station), by = list(Start_Hour, Start_Id)]#
+setnames(xd4, "V1", "trips")#
+xd4<-xd4[, (trips / 65), by = list(Start_Hour, Start_Id)]#
+setnames(xd4, "V1", "trips")#
+setkey(xd4, Start_Hour) #Sort data table to create plot faster#
+#
+amd4<-ggplot(xd4, aes(x = Start_Hour, y = trips, colour = as.factor(Start_Id) )) + geom_point() + geom_line() + theme(legend.position = "none") + labs( title = "Morning Departure Cluster 4", x = "Start Hour", y = "Average Number of Trips")#
+#
+##Combine all AM Departure plots#
+grid.newpage()#
+pushViewport(viewport(layout = grid.layout (2, 4))) # Establish Plot Layout#
+#
+print(amd1, vp = vplayout(1, 1:2)) #Print Plots#
+print(amd2, vp = vplayout(1, 3:4))#
+print(amd3, vp = vplayout(2, 1:2))#
+print(amd4, vp = vplayout(2, 3:4))
+amd1<-ggplot(xd1, aes(x = Start_Hour, y = trips, colour = as.factor(Start_Id) )) + geom_point() + geom_line() + theme(legend.position = "none", axis.title.x = element_blank(), axis.title.y = element_blank()) + labs( title = "Morning Departure Cluster 1", x = "Start Hour", y = "Average Number of Trips"))
+amd2<-ggplot(xd2, aes(x = Start_Hour, y = trips, colour = as.factor(Start_Id) )) + geom_point() + geom_line() + theme(legend.position = "none", axis.title.x = element_blank(), axis.title.y = element_blank()) + labs(title = "Morning Departure Cluster 2", x = "Start Hour", y = "Average Number of Trips"))
+amd3<-ggplot(xd3, aes(x = Start_Hour, y = trips, colour = as.factor(Start_Id) )) + geom_point() + geom_line() + theme(legend.position = "none", axis.title.x = element_blank(), axis.title.y = element_blank()) + labs( title = "Morning Departure Cluster 3", x = "Start Hour", y = "Average Number of Trips")
+amd4<-ggplot(xd4, aes(x = Start_Hour, y = trips, colour = as.factor(Start_Id) )) + geom_point() + geom_line() + theme(legend.position = "none") + labs( title = "Morning Departure Cluster 4", x = "Start Hour", y = "Average Number of Trips")
+print(amd1, vp = vplayout(1, 1:2)) #Print Plots#
+print(amd2, vp = vplayout(1, 3:4))#
+print(amd3, vp = vplayout(2, 1:2))#
+print(amd4, vp = vplayout(2, 3:4))
+amd3<-ggplot(xd3, aes(x = Start_Hour, y = trips, colour = as.factor(Start_Id) )) + geom_point() + geom_line() + theme(legend.position = "none", axis.title.x = element_blank(), axis.title.y = element_blank()) + labs(title = "Morning Departure Cluster 3", x = "Start Hour", y = "Average Number of Trips")
+amd1<-ggplot(xd1, aes(x = Start_Hour, y = trips, colour = as.factor(Start_Id) )) + geom_point() + geom_line() + theme(legend.position = "none", axis.title.x = element_blank(), axis.title.y = element_blank()) + labs( title = "Morning Departure Cluster 1", x = "Start Hour", y = "Average Number of Trips")
+amd2<-ggplot(xd2, aes(x = Start_Hour, y = trips, colour = as.factor(Start_Id) )) + geom_point() + geom_line() + theme(legend.position = "none", axis.title.x = element_blank(), axis.title.y = element_blank()) + labs(title = "Morning Departure Cluster 2", x = "Start Hour", y = "Average Number of Trips")
+xd3<-X[Start_Id == 17| Start_Id == 2| Start_Id == 116| Start_Id == 15| Start_Id == 80| Start_Id == 23| Start_Id == 66| Start_Id == 14| Start_Id == 20| Start_Id == 22| Start_Id == 16| Start_Id == 71| Start_Id == 65| Start_Id == 82| Start_Id == 96| Start_Id == 43| Start_Id == 5| Start_Id == 83|  Start_Id == 126| Start_Id == 100 & Day == "Weekday", length(Start_Station), by = list(Start_Hour, Start_Id)]
+amd3<-ggplot(xd3, aes(x = Start_Hour, y = trips, colour = as.factor(Start_Id) )) + geom_point() + geom_line() + theme(legend.position = "none", axis.title.x = element_blank(), axis.title.y = element_blank()) + labs(title = "Morning Departure Cluster 3", x = "Start Hour", y = "Average Number of Trips")
+amd4<-ggplot(xd4, aes(x = Start_Hour, y = trips, colour = as.factor(Start_Id) )) + geom_point() + geom_line() + theme(legend.position = "none") + labs( title = "Morning Departure Cluster 4", x = "Start Hour", y = "Average Number of Trips")
+grid.newpage()#
+pushViewport(viewport(layout = grid.layout (2, 4))) # Establish Plot Layout#
+#
+print(amd1, vp = vplayout(1, 1:2)) #Print Plots#
+print(amd2, vp = vplayout(1, 3:4))#
+print(amd3, vp = vplayout(2, 1:2))#
+print(amd4, vp = vplayout(2, 3:4))
+grid.newpage()#
+pushViewport(viewport(layout = grid.layout (2, 4))) # Establish Plot Layout#
+#
+print(amd1, vp = vplayout(1, 1:2)) #Print Plots#
+print(amd2, vp = vplayout(1, 3:4))#
+print(amd3, vp = vplayout(2, 1:2))#
+print(amd4, vp = vplayout(2, 3:4))
+amd1<-ggplot(xd1, aes(x = Start_Hour, y = trips, colour = as.factor(Start_Id) )) + geom_point() + geom_line() + theme(legend.position = "none") + labs( title = "Morning Departure Cluster 1", x = "Start Hour", y = "Average Number of Trips")
+amd2<-ggplot(xd2, aes(x = Start_Hour, y = trips, colour = as.factor(Start_Id) )) + geom_point() + geom_line() + theme(legend.position = "none") + labs(title = "Morning Departure Cluster 2", x = "Start Hour", y = "Average Number of Trips")
+amd3<-ggplot(xd3, aes(x = Start_Hour, y = trips, colour = as.factor(Start_Id) )) + geom_point() + geom_line() + theme(legend.position = "none") + labs(title = "Morning Departure Cluster 3", x = "Start Hour", y = "Average Number of Trips")
+amd4<-ggplot(xd4, aes(x = Start_Hour, y = trips, colour = as.factor(Start_Id) )) + geom_point() + geom_line() + theme(legend.position = "none") + labs( title = "Morning Departure Cluster 4", x = "Start Hour", y = "Average Number of Trips")
+grid.newpage()
+pushViewport(viewport(layout = grid.layout (2, 4))) # Establish Plot Layout
+print(amd1, vp = vplayout(1, 1:2)) #Print Plots
+print(amd2, vp = vplayout(1, 3:4))
+print(amd3, vp = vplayout(2, 1:2))
+print(amd4, vp = vplayout(2, 3:4))
+xd3<-X[Start_Id == 17| Start_Id == 2| Start_Id == 116| Start_Id == 15| Start_Id == 80| Start_Id == 23| Start_Id == 66| Start_Id == 14| Start_Id == 20| Start_Id == 22| Start_Id == 16| Start_Id == 71| Start_Id == 65| Start_Id == 82| Start_Id == 96| Start_Id == 43| Start_Id == 5| Start_Id == 83|  Start_Id == 126| Start_Id == 100 & Day == "Weekday", length(Start_Station), by = list(Start_Hour, Start_Id)]#
+setnames(xd3, "V1", "trips")#
+xd3<-xd3[, (trips / 65), by = list(Start_Hour, Start_Id)]#
+setnames(xd3, "V1", "trips")#
+setkey(xd3, Start_Hour) #Sort data table to create plot faster#
+#
+amd3<-ggplot(xd3, aes(x = Start_Hour, y = trips, colour = as.factor(Start_Id) )) + geom_point() + geom_line() + theme(legend.position = "none") + labs(title = "Morning Departure Cluster 3", x = "Start Hour", y = "Average Number of Trips")
+grid.newpage()#
+pushViewport(viewport(layout = grid.layout (2, 4))) # Establish Plot Layout#
+#
+print(amd1, vp = vplayout(1, 1:2)) #Print Plots#
+print(amd2, vp = vplayout(1, 3:4))#
+print(amd3, vp = vplayout(2, 1:2))#
+print(amd4, vp = vplayout(2, 3:4))
+?tiff
+?ggsave
+ggsave("cluster behavior", path = "/Users/SeanWarlick/Documents/Dropbox/School/Spring 2013/Research/Products/Submitted Documents/Figures")
+tiff("cluster behavior", path = "/Users/SeanWarlick/Documents/Dropbox/School/Spring 2013/Research/Products/Submitted Documents/Figures")
+?tiff
+tiff("cluster behavior")
+getwd()
+tiff("cluster behavior")#
+grid.newpage()#
+pushViewport(viewport(layout = grid.layout (2, 4))) # Establish Plot Layout#
+#
+print(amd1, vp = vplayout(1, 1:2)) #Print Plots#
+print(amd2, vp = vplayout(1, 3:4))#
+print(amd3, vp = vplayout(2, 1:2))#
+print(amd4, vp = vplayout(2, 3:4))
+library(ggmap)#
+library(zipcode)#
+library(ggplot2)#
+library(gpclib)#
+library(maptools)#
+#
+gpclibPermit() #Get Fortify to Work Correctly#
+#
+#Prepare Maps#
+map<-get_map(location=c(lon=-77.00455, lat=38.90893), zoom = 12, source = 'google', maptype = 'road')#
+map<-ggmap(map, extent = "device", legend = "topright")#
+#
+setwd("/Users/SeanWarlick/Documents/Dropbox/School/Spring 2013/Research/Data/Shape FIles/zipcode_shapefile") #Set Directory#
+#
+shapefile<-readShapeSpatial("tl_2010_11_zcta510.shp") #Load Shape File#
+shapefile@data$id = rownames(shapefile@data) #Prep Shape File#
+dc.points<-fortify(shapefile, region = "id")#
+#
+#Prepare Data#
+setwd("/Users/SeanWarlick/Documents/Dropbox/School/Spring 2013/Research/Data/R Data Files") #Change Directory#
+#
+pop<-read.csv("ACS_12_5YR_B01003.csv", sep = ',', header = TRUE) # Read in Population Data#
+#
+dc.df<-merge(dc.points, shapefile@data, by = "id") # Merge Needed Data#
+dc2<-merge(dc.df, pop, by.x = "ZCTA5CE10", by.y = "GEO.id2")#
+#
+dc2<-dc2[order(dc2$HD01_VD01), ]#
+dc2$binpop<-cut(dc2$HD01_VD01, breaks = c(0, 10000, 20000, 30000, 40000, 50000, 60000))#
+#
+#Plot Maps#
+map + geom_polygon(aes(x = long, y = lat, group = group, fill = binpop), data = dc2, colour ="white", alpha = .4, size = .3) + geom_polygon(aes(x, y, linetype = type), data = df, fill = NA, colour = "black", inherit.aes = TRUE)
+map + geom_polygon(aes(x = long, y = lat, group = group, fill = binpop), data = dc2, colour ="white", alpha = .4, size = .3)
+map + geom_polygon(aes(x = long, y = lat, group = group, fill = binpop), data = dc2, colour ="white", alpha = .4, size = .3)
+map
+#Load Needed Libraries#
+library(ggmap)#
+library(zipcode)#
+library(ggplot2)#
+library(gpclib)#
+library(maptools)#
+#
+gpclibPermit() #Get Fortify to Work Correctly#
+#
+#Prepare Maps#
+map<-get_map(location=c(lon=-77.00455, lat=38.90893), zoom = 12, source = 'google', maptype = 'road')#
+map<-ggmap(map, extent = "device", legend = "topright")#
+#
+setwd("/Users/SeanWarlick/Documents/Dropbox/School/Spring 2013/Research/Data/Shape FIles/zipcode_shapefile")
+shapefile<-readShapeSpatial("tl_2010_11_zcta510.shp") #Load Shape File
+shapefile@data$id = rownames(shapefile@data) #Prep Shape File
+dc.points<-fortify(shapefile, region = "id")
+map
+dev.new
+dev.new()
+map
+q()
