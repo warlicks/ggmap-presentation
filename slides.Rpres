@@ -1,0 +1,41 @@
+Maps Without the Hassel using ggmap  
+========================================================
+author: Sean Warlick  
+date: March  12, 2015  
+Statistical Programing DC
+
+Shape Files
+========================================================
+
+For more details on authoring R presentations click the
+**Help** button on the toolbar.
+
+```{r echo = FALSE}
+  library(zipcode)
+  library(gpclib)
+  library(maptools)
+
+  gpclibPermit() #Needed to get the fortify function to work
+  
+shapefile<-readShapePoly("tl_2010_11_zcta510.shp") #Load Shape File
+shapefile@data$id = rownames(shapefile@data) #Prep Shape File
+dc.points<-fortify(shapefile, region = "id")
+  ggplot(data = dc.points, aes(x))
+  
+- Have to track down all the need shapefiles
+- R is not the best at working with shapefiles need to find packages
+- It is not always obvious to the casual observer what they are looking at.  
+
+Slide With Code
+========================================================
+
+```{r}
+summary(cars)
+```
+
+Slide With Plot
+========================================================
+
+```{r, echo=FALSE}
+plot(cars)
+```
