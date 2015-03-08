@@ -1,12 +1,11 @@
-Maps Without the Hassel using ggmap  
+Maps Without the Hassle Using ggmap  
 ========================================================
 author: Sean Warlick  
 date: March  12, 2015  
-Statistical Programing DC
+Statistical Programming DC
 
 Shape Files
 ========================================================
-
 
 ```{r echo = FALSE, results='hide'}
 setwd("/Users/SeanWarlick/Documents/github/ggmap-presentation/zipcode_shapefile")
@@ -28,20 +27,29 @@ ggplot(data = dc.points, aes(x = long, y = lat, group = group), colour = "white"
 ```
 
 ****
-- Have to track down all the need shapefiles
-- R is not the best at working with shapefiles need to find packages
+- Have to track down all the need shape files.  
+- R is not the best at working with shape files and they have complex structure.  
+- Package changes and difficulties.
++ rgdal not updated for recent versions of Mac OS X
 - It is not always obvious to the casual observer what they are looking at.  
 
-Slide With Code
+ggmap
 ========================================================
 
-```{r}
-summary(cars)
+```{r echo = FALSE}
+library(ggmap)
+
+slide_map<-get_map(location = "United States", source = "google", zoom = 4, maptype = 'roadmap')
+slide_map<-ggmap(slide_map)
+slide_map
 ```
 
-Slide With Plot
+***  
+- No need to find shape files.  
+- Detailed, recognizable, and familiar maps without lots of shape file layers.  
+- Works with the familiar `ggplot()` syntax
+
+Live Code
 ========================================================
 
-```{r, echo=FALSE}
-plot(cars)
-```
+- Lets Run Some Code!  
