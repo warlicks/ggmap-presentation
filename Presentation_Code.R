@@ -2,8 +2,12 @@
 # ggmap presentation: Live Code Portion
 # March 12, 2015
 ###############################################################################
+#Install Need Packages
+###############################################################################
+install.packages("data.table", "ggmap")
 
 #Load Library and Set Working Directory
+###############################################################################
 setwd("/Users/SeanWarlick/Documents/GitHub/ggmap-presentation")
 library(data.table)
 library(ggmap)
@@ -12,10 +16,9 @@ library(ggplot2)
 # Load Data
 ###############################################################################
 bike<-fread("presentation_data.csv", header = TRUE, sep = ',')
-station<-fread("station_location.csv", header = TRUE, sep = ',')
-setnames(station, "Station_Id", "Start_Id")
 
-#Cluster Cirlce Data
+
+##Cluster Cirlce Data
 angle<-seq(-pi,pi,length=50)
 df<-data.frame(x= 0.01351351 * sin(angle) - 77.038319, y = 0.01351351 * cos(angle) + 38.931150)
 df$type = rep("Departure", 50)
