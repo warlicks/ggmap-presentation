@@ -11,7 +11,7 @@ library(ggplot2)
 
 # Load Data
 ###############################################################################
-bike<-fread("bike2.csv", header = TRUE, sep = ',')
+bike<-fread("presentation_data.csv", header = TRUE, sep = ',')
 station<-fread("station_location.csv", header = TRUE, sep = ',')
 setnames(station, "Station_Id", "Start_Id")
 
@@ -19,12 +19,6 @@ setnames(station, "Station_Id", "Start_Id")
 angle<-seq(-pi,pi,length=50)
 df<-data.frame(x= 0.01351351 * sin(angle) - 77.038319, y = 0.01351351 * cos(angle) + 38.931150)
 df$type = rep("Departure", 50)
-
-# Fast Data Manipulation
-###############################################################################
-weekday_bike<-bike[, length(Bike_Key) / 91, by = Start_Id] #Coup
-weekday_bike<-merge(weekday_bike, station, by = "Start_Id")
-setnames(weekday_bike, "V1", "average")
 
 # Getting The Map
 ###############################################################################
@@ -79,9 +73,11 @@ cordinates<-geocode(location = c("Hartsfield - Jackson Atlanta International", "
 geocodeQueryCheck()
 
 #Compute Distances
+###############################################################################
 distance<-mapdist(weekday_bike[name == "Kennedy Center", as.numeric(list(longitude, latitude))], weekday_bike[name == "White House", as.numeric(list(longitude, latitude))], mode = 'bicycling')
 
 #Get Directions
+###############################################################################
 directions<-route(weekday_bike[name == "Kennedy Center", as.numeric(list(longitude, latitude))], weekday_bike[name == "White House", as.numeric(list(longitude, latitude))], mode = 'bicycling')
 
 map + geom_segment(data = directions, aes(x = startLon, y = startLat, xend = endLon, yend = endLat))
