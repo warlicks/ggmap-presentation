@@ -36,15 +36,15 @@ map<-ggmap(get_map(location=c(lon = -77.00455, lat = 38.90893), zoom = 12, mapty
 map
 
 ## Provide Four Corners of The Map
-box<-make_bbox(lon = longitude, lat = latitude, data = weekday_bike)
+box<-make_bbox(lon = longitude, lat = latitude, data = bike)
 map<-ggmap(get_map(location = box, source = 'google', zoom = 12, maptype = 'roadmap'))
 
 ## Add Detail to the map
-map + geom_point(data = weekday_bike, aes(x = longitude, y = latitude, size = average))
+map + geom_point(data = bike, aes(x = longitude, y = latitude, size = average))
 
-map + geom_point(data = weekday_bike, aes(x = longitude, y = latitude, colour = average))
+map + geom_point(data = bike, aes(x = longitude, y = latitude, colour = average))
 
-map + geom_point(data = weekday_bike, aes(x = longitude, y = latitude)) + geom_polygon(aes(x, y, linetype = type), data = df, fill = NA, colour = "black", inherit.aes = TRUE)
+map + geom_point(data = bike, aes(x = longitude, y = latitude)) + geom_polygon(aes(x, y, linetype = type), data = df, fill = NA, colour = "black", inherit.aes = TRUE)
 
 
 # Geo Coding
@@ -58,13 +58,13 @@ address
 
 ## Create an Intersection
 geocode(location = "G St NW & 22nd St NW, Washington, DC")
-map<-ggmap(get_map(location = c(lon = -98.01001, lat = 41.11103)))
-map  #Intersections Don't Seem to Work.
+map2<-ggmap(get_map(location = c(lon = -98.01001, lat = 41.11103)))
+map2  #Intersections Don't Seem to Work.
 
 # Geocode a State
 geocode(location = 'Iowa')
-map<-ggmap(get_map(location = c(lon = -93.0977, lat = 41.874), source = 'google', zoom = 7))
-map
+map2<-ggmap(get_map(location = c(lon = -93.0977, lat = 41.874), source = 'google', zoom = 7))
+map2
 
 ## Geocode Several Locations At Once
 cordinates<-geocode(location = c("Hartsfield - Jackson Atlanta International", "LAX", 'ORD', 'DFW', 'Denver International', 'JFK', 'SFO', 'CLT', 'LAS', 'PHX', 'Miami International', 'IAH', 'EWR', 'MCO', 'SEA', 'MSP', 'DTW', 'BOS', 'PHL', 'LGA'))
@@ -74,10 +74,10 @@ geocodeQueryCheck()
 
 #Compute Distances
 ###############################################################################
-distance<-mapdist(weekday_bike[name == "Kennedy Center", as.numeric(list(longitude, latitude))], weekday_bike[name == "White House", as.numeric(list(longitude, latitude))], mode = 'bicycling')
+distance<-mapdist(bike[name == "Kennedy Center", as.numeric(list(longitude, latitude))], bike[name == "White House", as.numeric(list(longitude, latitude))], mode = 'bicycling')
 
 #Get Directions
 ###############################################################################
-directions<-route(weekday_bike[name == "Kennedy Center", as.numeric(list(longitude, latitude))], weekday_bike[name == "White House", as.numeric(list(longitude, latitude))], mode = 'bicycling')
+directions<-route(bike[name == "Kennedy Center", as.numeric(list(longitude, latitude))], bike[name == "White House", as.numeric(list(longitude, latitude))], mode = 'bicycling')
 
 map + geom_segment(data = directions, aes(x = startLon, y = startLat, xend = endLon, yend = endLat))
