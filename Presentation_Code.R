@@ -2,13 +2,9 @@
 # ggmap presentation: Live Code Portion
 # March 12, 2015
 ###############################################################################
-#Install Need Packages
-###############################################################################
-install.packages("data.table", "ggmap")
 
 #Load Library and Set Working Directory
 ###############################################################################
-setwd("/Users/SeanWarlick/Documents/GitHub/ggmap-presentation")
 library(data.table)
 library(ggmap)
 library(ggplot2)
@@ -16,7 +12,6 @@ library(ggplot2)
 # Load Data
 ###############################################################################
 bike<-fread("presentation_data.csv", header = TRUE, sep = ',')
-
 
 ##Cluster Cirlce Data
 angle<-seq(-pi,pi,length=50)
@@ -84,3 +79,5 @@ distance<-mapdist(bike[name == "Kennedy Center", as.numeric(list(longitude, lati
 directions<-route(bike[name == "Kennedy Center", as.numeric(list(longitude, latitude))], bike[name == "White House", as.numeric(list(longitude, latitude))], mode = 'bicycling')
 
 map + geom_segment(data = directions, aes(x = startLon, y = startLat, xend = endLon, yend = endLat))
+
+#End of File
