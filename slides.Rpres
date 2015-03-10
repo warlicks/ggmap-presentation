@@ -56,3 +56,9 @@ Live Code
 -- ` ggmap('object') `
 
 - Lets Run Some Code!  
+
+Resources
+========================================================  
+- `help()`
+- [David Kahle and Hadley Wickham's Paper](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf)
+- [Tonight's code on git hub](https://github.com/warlicks/ggmap-presentation.git)
