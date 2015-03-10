@@ -30,7 +30,6 @@ ggplot(data = dc.points, aes(x = long, y = lat, group = group), colour = "white"
 - Have to track down all the need shape files.  
 - R is not the best at working with shape files and they have complex structure.  
 - Package changes and difficulties.
-+ rgdal not updated for recent versions of Mac OS X
 - It is not always obvious to the casual observer what they are looking at.  
 
 ggmap
@@ -47,9 +46,13 @@ slide_map
 ***  
 - No need to find shape files.  
 - Detailed, recognizable, and familiar maps without lots of shape file layers.  
-- Works with the familiar `ggplot()` syntax
+- Works with the familiar `ggplot()` syntax.
 
 Live Code
 ========================================================
+
+- 2 Primary functions.  
+-- ` get_map(location, source, zoom, maptype)`  
+-- ` ggmap('object') `
 
 - Lets Run Some Code!  
