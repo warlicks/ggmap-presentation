@@ -2,6 +2,8 @@
 # ggmap presentation: Live Code Portion
 # March 12, 2015
 ###############################################################################
+#Install Needed Packages
+install.packages("ggmap", "data.table")
 
 #Load Library and Set Working Directory
 ###############################################################################
