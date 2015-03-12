@@ -8,7 +8,7 @@ Shape Files
 ========================================================
 
 ```{r echo = FALSE, results='hide'}
-setwd("/Users/SeanWarlick/Documents/github/ggmap-presentation/zipcode_shapefile")
+setwd("zipcode_shapefile") 
 
 library(ggmap)
 library(ggplot2)
@@ -18,7 +18,7 @@ library(maptools)
   gpclibPermit() #Needed to get the fortify function to work
 ```
 ```{r echo = FALSE}
-setwd("/Users/SeanWarlick/Documents/github/ggmap-presentation/zipcode_shapefile")
+setwd("zipcode_shapefile")
 shapefile<-readShapeSpatial("tl_2010_11_zcta510.shp") #Load Shape File
 shapefile@data$id = rownames(shapefile@data) #Prep Shape File
 dc.points<-fortify(shapefile, region = "id")
@@ -53,7 +53,7 @@ Live Code
 
 - 2 Primary functions.  
 -- ` get_map(location, source, zoom, maptype)`  
--- ` ggmap('object') `
+-- ` ggmap(object) `
 
 - Lets Run Some Code!  
 
@@ -61,4 +61,4 @@ Resources
 ========================================================  
 - `help()`
 - [David Kahle and Hadley Wickham's Paper](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf)
-- [Tonight's code on git hub](https://github.com/warlicks/ggmap-presentation.git)
+- [Tonight's code on github](https://github.com/warlicks/ggmap-presentation.git)
