@@ -10,7 +10,7 @@ This repository contains all the files used for the presentation on ggmap given 
 1. Download the zip file or clone the repository.  
 2. Open the R Studio Project.  
 3. Install the *ggplot2*, *ggmap* and *data.table* packages.  
-4. Before the presentation while you have an internet connection open Presentation_Code.R and run lines 40, 61 and 67.  This will provide the background maps used during the presentation.  
+4. Before the presentation while you have an internet connection open Presentation_Code.R and run lines 35, 61 and 66.  This will provide the background maps used during the presentation.  
 5. *Do Not Close your R Session.*  R will continue to hold the maps in memmory which you can use in the presentation.  
 
 ## Files Included  
