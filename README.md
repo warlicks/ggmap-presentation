@@ -21,4 +21,4 @@ Updates to **ggmap** have changed the default service for geocoding locations.  
 2. **Presentation_Code.R:** A copy of the code run demonstrated during the talk.  
 3. **slides.Rpres:** A copy of the R Markdown code used to create the HTML slides used during the presentation.    
 4. **presentation_data.csv:** Data used during the presentation.  Contains the daily average of trips from bike share stations in Washington, DC.  
-5. **zipcode_shapefile:** Contains Shape Files for Washington DC.  Used in the presentation slides.    
+5. **zipcode_shapefile:** Contains Shape Files for Washington DC.  Used in the presentation slides.
